@@ -1,7 +1,7 @@
 mysql -u root -p
 mysql --user yash --password 
 show databases;
-cl scr
+system clear
 
 ==CREATE NEW USER
 GRANT ALL PRIVILEGES ON *.* TO 'yash'@'localhost' IDENTIFIED BY 'hahapasswordischanged';
@@ -95,3 +95,47 @@ SELECT * FROM ORDERS;
 
 Backup database order_data
 to disk = '/home/yash/MySQL'
+
+delete from CUSTOMERS where Cnum is NULL;  //imp fro NULL Cnum = NULL doesnt work
+delete from CUSTOMERS where Cnum <=> NULL; // instead of = use  <=>  /// imp
+
+insert into CUSTOMERS values();   //NULL entry get created .... demo only
+
+
+LOCKING
+in workbench
+
+
+edit preference -> SQL editor -> uncheck safe update and del option ->reconnect to server -> Query menu -> diable autocommit
+now update and delete is on.
+
+select * from CUSTOMERS FOR UPDATE where ....;   // manual row locking run before every update/delete command // good practice
+select * from CUSTOMERS FOR UPDATE;               // entire table manual locking
+
+ select upper(concat(city," ", cname)) from CUSTOMERS;
+select concat(city) from CUSTOMERS;
+
+select initcap(cname) from CUSTOMERS;   // NOT IN mysql
+
+
+
+select concat(upper(substr(cname, 1, 1)),substr(cname,2)) from CUSTOMERS; // INIT CAP
+select concat(concat(upper(substr(cname, 1, 1)),substr(cname,2))," ",concat(upper(substr(city, 1, 1)),substr(city,2)))  from CUSTOMERS;
+
+
+select lpad(rpad(cname, 20+(length(cname)-1)/2, "*"), 40, "*") from CUSTOMERS;
+
+select translate(cname, "a", "") from CUSTOMERS;   // MYSQL doesnt support
+
+select replace(cname, "lakshu lov you", "roma") from CUSTOMERS; // works everywhere
+
+select replace(replace(replace(replace(replace(cname, 'a', ""),"e" ,""),"i", ""),"o",""),"u","") from CUSTOMERS;  // replace vowels
+
+
+
+
+
+
+
+
+
