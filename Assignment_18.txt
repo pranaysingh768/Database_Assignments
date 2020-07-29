@@ -34,7 +34,7 @@ prev int(4),
 constraint in_fx foreign key(prev) references Cityorders(Onum),
 constraint cfx foreign key(cnum) references customers(cnum),
 
-constraint sfx foreign key(snum) references salespeople(snum),
+constraint sfx foreign key(snum) references salespeople(snum)
 
 );
 
