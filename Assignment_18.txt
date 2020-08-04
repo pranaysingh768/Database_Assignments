@@ -1,6 +1,5 @@
+hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 
-
-Assignment – 18
 Maintaining the Integrity of your Data.
 1) Create a table called Cityorders. This will contain the same onum, amt and snum
 fields as the Orders table, and the same cnum and city fields as the Customers
