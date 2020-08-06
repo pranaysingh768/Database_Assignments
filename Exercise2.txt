@@ -1,3 +1,5 @@
+
+1245879665
 SQL 
 Exercise 2
 
@@ -26,18 +28,18 @@ the ascending order of Part names.
 
 
 
-5. Display all the Part names starting with the letter ‘S’.
+5. Display all the Part names starting with the letter â€˜Sâ€™.
 
 > select Pname from parts where Pname like 'S%';
 
 
 
-6. Display all the Suppliers, belonging to cities starting with the letter ‘L’.
+6. Display all the Suppliers, belonging to cities starting with the letter â€˜Lâ€™.
 
 > select Sname from supplier  where city like 'L%';
 
 
 
-7. Display all the Projects, with the third letter in JNAME as ‘n
+7. Display all the Projects, with the third letter in JNAME as â€˜n
 
 > select * from projects where city Jname '__n%';
